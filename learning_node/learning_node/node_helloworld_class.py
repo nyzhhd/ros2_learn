@@ -11,6 +11,7 @@ from rclpy.node import Node                      # ROS2 节点类
 import time
 
 """
+
 创建一个HelloWorld节点, 初始化时输出“hello world”日志
 """
 class HelloWorldNode(Node):
