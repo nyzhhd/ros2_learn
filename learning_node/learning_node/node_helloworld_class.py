@@ -11,7 +11,7 @@ from rclpy.node import Node                      # ROS2 节点类
 import time
 
 """
-
+122333
 创建一个HelloWorld节点, 初始化时输出“hello world”日志
 """
 class HelloWorldNode(Node):
@@ -26,3 +26,4 @@ def main(args=None):                                 # ROS2节点主入口main�
     node = HelloWorldNode("node_helloworld_class")   # 创建ROS2节点对象并进行初始化
     node.destroy_node()                              # 销毁节点对象
     rclpy.shutdown()                                 # 关闭ROS2 Python接口
+1
