@@ -20,8 +20,8 @@ class ImagePublisher(Node):
     def __init__(self, name):
         super().__init__(name)                                           # ROS2节点父类初始化
         self.publisher_ = self.create_publisher(Image, 'image_raw', 10)  # 创建发布者对象（消息类型、话题名、队列长度）
-        self.timer = self.create_timer(0.1, self.timer_callback)         # 创建一个定时器（单位为秒的周期，定时执行的回调函数）
-        self.cap = cv2.VideoCapture(0)                                   # 创建一个视频采集对象，驱动相机采集图像（相机设备号）
+        self.timer = self.create_timer(1, self.timer_callback)         # 创建一个定时器（单位为秒的周期，定时执行的回调函数）
+        self.cap = roscv2.VideoCapture(0)                                   # 创建一个视频采集对象，驱动相机采集图像（相机设备号）
         self.cv_bridge = CvBridge()                                      # 创建一个图像转换对象，用于稍后将OpenCV的图像转换成ROS的图像消息
 
     def timer_callback(self):
